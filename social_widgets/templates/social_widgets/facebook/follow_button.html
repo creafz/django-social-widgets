@@ -1,0 +1,14 @@
+{% extends "social_widgets/facebook/_base.html" %}
+{% load social_widgets %}
+{% block widget %}
+<div class="fb-follow"
+     data-href="{{ href }}" {# Required parameter #}
+     {% if width %}data-width="{{ width }}"{% endif %}
+     {% if height %} data-height="{{ height }}"{% endif %}
+     data-colorscheme="{{ colorscheme|to_data_string_with_default:"light" }}"
+     data-kid-directed-site="{{ kid_directed_site|to_data_string_with_default:"false" }}"
+     data-layout="{{ layout|to_data_string_with_default:"standard" }}"
+     data-show-faces="{{ show_faces|to_data_string_with_default:"false" }}"
+>
+</div>
+{%  endblock widget %}

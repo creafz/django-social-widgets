@@ -1,0 +1,11 @@
+{% extends "social_widgets/google/_base.html" %}
+{% load social_widgets %}
+{% block widget %}
+<div class="g-follow"
+     data-href="{{ href }}" {# Required #}
+     data-annotation="{{ annotation|to_data_string_with_default:"bubble" }}"
+     data-height="{{ height|to_data_string_with_default:20 }}"
+     data-rel="{{ rel|to_data_string_with_default:"publisher" }}"
+>
+</div>
+{% endblock widget %}

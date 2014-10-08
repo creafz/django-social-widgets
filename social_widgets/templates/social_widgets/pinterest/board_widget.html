@@ -1,0 +1,10 @@
+{% extends "social_widgets/pinterest/_base.html" %}
+{% load social_widgets %}
+{% block widget %}
+<a data-pin-do="embedBoard"
+   href="{{ href }}" {# Required #}
+   data-pin-scale-width="{{ pin_scale_width|to_data_string_with_default:80 }}"
+   data-pin-scale-height="{{ pin_scale_height|to_data_string_with_default:320 }}"
+   data-pin-board-width="{{ pin_board_width|to_data_string_with_default:400 }}" >
+</a>
+{% endblock %}

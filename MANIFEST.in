@@ -1,0 +1,9 @@
+include LICENSE
+include README.rst
+include MANIFEST.in
+recursive-include social_widgets/templatetags *
+recursive-include social_widgets/templates *
+exclude .travis.yml
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * .DS_Store

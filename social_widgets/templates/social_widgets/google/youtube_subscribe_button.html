@@ -1,0 +1,11 @@
+{% extends "social_widgets/google/_base.html" %}
+{% load social_widgets %}
+{% block widget %}
+<div class="g-ytsubscribe"
+     data-channel="{{ channel }}" {#  Required #}
+     data-theme="{{ theme|default_if_none:"default" }}"
+     data-layout="{{ layout|default_if_none:"default" }}"
+     data-count="{{ count|default_if_none:"default" }}"
+>
+</div>
+{% endblock widget %}

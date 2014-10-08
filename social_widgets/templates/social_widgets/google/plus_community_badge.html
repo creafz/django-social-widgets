@@ -1,0 +1,14 @@
+{% extends "social_widgets/google/_base.html" %}
+{% load social_widgets %}
+{% block widget %}
+<div class="g-community"
+     data-href="{{ href }}" {# Required #}
+     data-layout="{{ layout|to_data_string_with_default:"portrait" }}"
+     data-showphoto="{{ showphoto|to_data_string_with_default:"true" }}"
+     data-showtagline="{{ showtagline|to_data_string_with_default:"true" }}"
+     data-showowners="{{ showowners|to_data_string_with_default:"false" }}"
+     data-theme="{{ theme|to_data_string_with_default:"light" }}"
+     data-width="{{ width|to_data_string_with_default:300 }}"
+>
+</div>
+{% endblock widget %}

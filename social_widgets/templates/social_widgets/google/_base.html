@@ -1,0 +1,20 @@
+{% load social_widgets %}
+{% block widget %}
+{% endblock widget %}
+{% block javascript %}
+{% if nojs or widget_service in social_widgets_javascript %}
+   {# Do not load JavaScript then #}
+{% else %}
+<script type="text/javascript">
+window.___gcfg = {
+  lang: "{{ language|default_if_none:"en-US" }}",
+  parsetags: "onload"
+};
+  (function() {
+    var po = document.createElement("script"); po.type = "text/javascript"; po.async = true;
+    po.src = "https://apis.google.com/js/platform.js";
+    var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+{% endif %}
+{% endblock javascript %}

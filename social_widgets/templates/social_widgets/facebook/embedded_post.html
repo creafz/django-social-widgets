@@ -1,0 +1,9 @@
+{% extends "social_widgets/facebook/_base.html" %}
+{% load social_widgets %}
+{% block widget %}
+<div class="fb-post"
+         data-href="{{ href }}" {# Required parameter #}
+         data-width=="{{ width|to_data_string_with_default:500 }}"
+>
+</div>
+{% endblock widget %}

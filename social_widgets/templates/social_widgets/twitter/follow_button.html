@@ -1,0 +1,15 @@
+{% extends "social_widgets/twitter/_base.html" %}
+{% load social_widgets %}
+{% block widget %}
+<a class="twitter-follow-button"
+   href="https://twitter.com/{{ username }}" {# Required #}
+   {% if lang %}data-lang="{{ lang|default_if_none:"en" }}"{% endif %}
+   {% if width %}data-width="{{ width }}"{% endif %}
+   {% if align %}data-align="{{ align }}"{% endif %}
+   data-show-screen-name="{{ show_screen_name|to_data_string_with_default:"true" }}"
+   data-show-count="{{ show_count|to_data_string_with_default:"false" }}"
+   data-size="{{ size|to_data_string_with_default:"medium" }}"
+   data-dnt="{{ dnt|to_data_string_with_default:"false" }}" >
+   Follow @{{ username }}
+</a>
+{% endblock widget %}

@@ -1,0 +1,17 @@
+{% extends "social_widgets/facebook/_base.html" %}
+{% load social_widgets %}
+{% block widget %}
+<div class="fb-recommendations"
+     {% if site %}data-site="{{ site }}"{% endif %}
+     {% if ref %}data-ref="{{ ref }}"{% endif %}
+     data-action="{{ action|to_data_string_with_default:"likes, recommends" }}"
+     data-colorscheme="{{ colorscheme|to_data_string_with_default:"light" }}"
+     data-header="{{ header|to_data_string_with_default:"true" }}"
+     data-height="{{ height|to_data_string_with_default:300 }}"
+     data-linktarget="{{ linktarget|to_data_string_with_default:"_blank" }}"
+     data-max-age="{{ max_age|to_data_string_with_default:0 }}"
+     data-width="{{ width|to_data_string_with_default:300 }}"
+>
+</div>
+{% endblock widget %}
+

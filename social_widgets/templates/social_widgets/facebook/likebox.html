@@ -1,0 +1,22 @@
+{% extends "social_widgets/facebook/_base.html" %}
+{% load social_widgets %}
+{% block widget %}
+<div class="fb-like-box"
+     data-href="{{ href }}" {# Required parameter #}
+     {% comment %}
+     If there is no data-height parameter Facebook widget will automatically
+     resize itself to fit data, so we first check for parameter's existence.
+     {% endcomment %}
+     {% if height %}
+        data-height="{{ height }}"
+     {% endif %}
+     data-colorscheme="{{ colorscheme|to_data_string_with_default:"light" }}"
+     data-force-wall="{{ force_wall|to_data_string_with_default:"false" }}"
+     data-header="{{ header|to_data_string_with_default:"true" }}"
+     data-show-border="{{ show_border|to_data_string_with_default:"true" }}"
+     data-show-faces="{{ show_faces|to_data_string_with_default:"true" }}"
+     data-stream="{{ stream|to_data_string_with_default:"false" }}"
+     data-width="{{ width|to_data_string_with_default:300 }}"
+>
+</div>
+{%  endblock widget %}
