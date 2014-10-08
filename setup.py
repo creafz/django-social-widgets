@@ -18,7 +18,7 @@ setup(
     long_description=README,
     keywords='Django, social network, template, facebook, twitter',
     url='https://github.com/creafz/django-social-widgets',
-    download_url = 'https://github.com/creafz/django-social-widgets/0.1',
+    download_url='https://github.com/creafz/django-social-widgets/tarball/0.1',
     author='Alex Parinov',
     author_email='creafz@gmail.com',
     classifiers=[
