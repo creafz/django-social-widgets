@@ -22,9 +22,8 @@ def get_item(dictionary, key):
 
 @register.filter(is_safe=False)
 def to_data_string_with_default(value, arg=''):
-    """
-    Given a Python boolean value converts it to string representation so we
-    can use it in HTML data attributes. If value is None use given default
+    """ Given a Python boolean value converts it to string representation so
+    we can use it in HTML data attributes. If value is None use given default
     or '' if default is not provided.
 
     -----       ------
@@ -33,7 +32,6 @@ def to_data_string_with_default(value, arg=''):
     True        "true"
     False       "false"
     None        arg
-
     """
     if isinstance(value, bool):
         if value:
@@ -121,8 +119,7 @@ class SocialWidgetNode(Node):
 
 @register.tag
 def social_widget_render(parser, token):
-    """
-    Renders the selected social widget. You can specify optional settings
+    """ Renders the selected social widget. You can specify optional settings
     that will be passed  to widget template.
 
     Sample usage:
@@ -130,7 +127,6 @@ def social_widget_render(parser, token):
 
     For example to render Twitter follow button you can use code like this:
     {% social_widget_render 'twitter/follow_button.html' username="ev" %}
-
     """
     bits = token.split_contents()
     tag_name = bits[0]
