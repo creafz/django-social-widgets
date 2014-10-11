@@ -47,11 +47,6 @@ class SocialWidgetNode(Node):
         self.kwargs = kwargs
 
     def render(self, context):
-        # Make the template engine interpret True, False and None as the
-        # corresponding Python objects. Django 1.5+ already has that feature.
-        if DJANGO_VERSION < (1, 5):
-            context.update({'True': True, 'False': False, 'None': None})
-
         args = [arg.resolve(context) for arg in self.args]
         kwargs = dict((smart_text(k, 'ascii'), v.resolve(context))
                       for k, v in self.kwargs.items())
