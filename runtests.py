@@ -6,7 +6,7 @@ from django.core.management import call_command
 
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 
-# Added to support Django >= 1.7
+
 
 settings.configure(
     INSTALLED_APPS=('social_widgets',),
@@ -18,6 +18,7 @@ settings.configure(
     }
 )
 
+# Added to support Django >= 1.7
 import django
 if django.VERSION[:2] >= (1, 7):
     django.setup()
