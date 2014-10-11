@@ -5,6 +5,11 @@ Django Social Widgets
 Django app for easy embedding social network widgets and plugins into your site. Supports Facebook, Twitter, Google+, YouTube, Instagram and Pinterest. Demo: 
 `https://creafz.github.io/django-social-widgets/index.html <https://creafz.github.io/django-social-widgets/index.html>`_.
 
+Requirements
+------------
+* Python 2.6 or 2.7
+* Django 1.5 or higher
+
 Quickstart
 ----------
 
