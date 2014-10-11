@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 import sys
 import os
+
 from django.conf import settings
 from django.core.management import call_command
 
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-
 
 
 settings.configure(
