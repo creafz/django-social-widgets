@@ -22,6 +22,7 @@ setup(
     author='Alex Parinov',
     author_email='creafz@gmail.com',
     classifiers=[
+        'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
