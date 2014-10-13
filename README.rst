@@ -2,8 +2,9 @@
 Django Social Widgets
 =====================
 
-Django app for easy embedding social network widgets and plugins into your site. Supports Facebook, Twitter, Google+, YouTube, Instagram and Pinterest. Demo: 
-`https://creafz.github.io/django-social-widgets/index.html <https://creafz.github.io/django-social-widgets/index.html>`_.
+Django app for easy embedding social network widgets and plugins into your site. Supports Facebook, Twitter, Google+, YouTube, Instagram and Pinterest.
+
+Useful links:  `Documentation <https://django-social-widgets.readthedocs.org/en/latest/>`_, `Demo <https://creafz.github.io/django-social-widgets/index.html>`_.
 
 Requirements
 ------------
@@ -46,39 +47,35 @@ As a value for all parameters you can use a Python value like string, integer or
 
 See this `demo page <https://creafz.github.io/django-social-widgets/index.html>`_ with all supported widgets, their code and available parameters.
 
-Supported Widgets
------------------
-
 Facebook
 --------
-* `Likebox <https://creafz.github.io/django-social-widgets/index.html#facebook-likebox>`_
-* `Follow Button <https://creafz.github.io/django-social-widgets/index.html#facebook-follow-button>`__
-* `Embedded Post <https://creafz.github.io/django-social-widgets/index.html#facebook-embedded-post>`_
-* `Activity Feed <https://creafz.github.io/django-social-widgets/index.html#facebook-activity-feed>`_
-* `Recommendations Feed <https://creafz.github.io/django-social-widgets/index.html#facebook-recommendations-feed>`_
+* Likebox - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/facebook_widgets.html#likebox>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#facebook-likebox>`__
+* Follow Button - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/facebook_widgets.html#follow-button>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#facebook-follow-button>`__
+* Embedded Post - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/facebook_widgets.html#embedded-post>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#facebook-embedded-post>`__
+* Activity Feed - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/facebook_widgets.html#activity-feed>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#facebook-activity-feed>`__
+* Recommendations Feed - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/facebook_widgets.html#recommendations-feed>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#facebook-recommendations-feed>`__
 
 Twitter
 -------
-* `Follow Button <https://creafz.github.io/django-social-widgets/index.html#twitter>`__
+* Follow Button - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/twitter_widgets.html#follow-button>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#twitter>`__
 
 Google+
 -------
-* `Person Badge <https://creafz.github.io/django-social-widgets/index.html#google-plus-person-badge>`_
-* `Page Badge <https://creafz.github.io/django-social-widgets/index.html#google-plus-page-badge>`_
-* `Community Badge <https://creafz.github.io/django-social-widgets/index.html#google-plus-community-badge>`_
+* Person Badge - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/google_widgets.html#google-person-badge>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#google-plus-person-badge>`__
+* Page Badge - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/google_widgets.html#google-page-badge>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#google-plus-page-badge>`__
+* Community Badge - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/google_widgets.html#google-community-badge>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#google-plus-community-badge>`__
 
 YouTube
 -------
-* `Subscribe Button <https://creafz.github.io/django-social-widgets/index.html#youtube-subscribe-button>`_
+* Subscribe Button - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/google_widgets.html#youtube-subscribe-button>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#youtube-subscribe-button>`__
 
 Instagram
 ---------
-* `Instagram Badge <https://creafz.github.io/django-social-widgets/index.html#instagram-badge>`_
+* Instagram Badge - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/instagram_widgets.html#instagram-badge>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#instagram-badge>`__
 
 Pinterest
 ---------
-* `Follow Button <https://creafz.github.io/django-social-widgets/index.html#pinterest-follow-button>`__
-* `Pin Widget <https://creafz.github.io/django-social-widgets/index.html#pinterest-pin-widget>`_
-* `Profile Widget <https://creafz.github.io/django-social-widgets/index.html#pinterest-profile-widget>`_
-* `Board Widget <https://creafz.github.io/django-social-widgets/index.html#pinterest-board-widget>`_
-
+* Follow Button - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/pinterest_widgets.html#follow-button>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#pinterest-follow-button>`__
+* Pin Widget - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/pinterest_widgets.html#pin-widget>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#pinterest-pin-widget>`__
+* Profile Widget - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/pinterest_widgets.html#profile-widget>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#pinterest-profile-widget>`__
+* Board Widget - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/pinterest_widgets.html#board-widget>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#pinterest-board-widget>`__
