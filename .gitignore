@@ -2,3 +2,9 @@
 .DS_Store
 .tox/
 *.pyc
+build/*
+dist/*
+sdist/*
+docs/_rst/*
+docs/_build/*
+cover/*
