@@ -63,3 +63,10 @@ class TestToDataStringWithDefaultFilter(TestCase):
             "{{ None|to_data_string_with_default:'default' }}"
         )
         self.assertEqual(html, "default")
+
+
+class TestGetItemFilter(TestCase):
+    def test_get_item(self):
+        dictionary = {"key": "value"}
+        html = render_string("{{ dictionary|get_item:'key' }}", {"dictionary": dictionary})
+        self.assertEqual(html, "value")
