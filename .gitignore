@@ -1,6 +1,7 @@
 .idea/
 .DS_Store
 .tox/
+htmlcov/*
 *.pyc
 build/*
 dist/*
