@@ -19,3 +19,6 @@ install:
 
 script:
   - coverage run runtests.py --source social_widgets
+
+after_success:
+  - coveralls
