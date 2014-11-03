@@ -2,7 +2,7 @@
 .DS_Store
 .tox/
 .coverage
-htmlcov/*
+htmlcov
 *.pyc
 build/*
 dist/*
