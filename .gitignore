@@ -1,6 +1,7 @@
 .idea/
 .DS_Store
 .tox/
+.coverage
 htmlcov/*
 *.pyc
 build/*
