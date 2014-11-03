@@ -6,6 +6,10 @@ Django Social Widgets
     :target: https://pypi.python.org/pypi/django-social-widgets/
     :alt: Downloads
 
+.. image:: https://readthedocs.org/projects/django-social-widgets/badge/?version=latest
+    :target: https://readthedocs.org/projects/django-social-widgets/?badge=latest
+    :alt: Documentation Status
+
 .. image:: https://travis-ci.org/creafz/django-social-widgets.svg?branch=master
     :target: https://travis-ci.org/creafz/django-social-widgets
 
