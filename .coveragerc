@@ -1,0 +1,6 @@
+[run]
+branch = True
+include =
+    social_widgets/*
+omit =
+    social_widgets/tests.py
