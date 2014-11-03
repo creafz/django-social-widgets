@@ -61,6 +61,12 @@ As a value for all parameters you can use a Python value like string, integer or
 
 See this `demo page <https://creafz.github.io/django-social-widgets/index.html>`_ with all supported widgets, their code and available parameters.
 
+
+Example project
+---------------
+You can find an example project in "`example_project <https://github.com/creafz/django-social-widgets/tree/master/example_project>`__" directory.
+
+
 Facebook
 --------
 * Likebox - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/facebook_widgets.html#likebox>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#facebook-likebox>`__
