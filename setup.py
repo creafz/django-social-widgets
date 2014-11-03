@@ -1,10 +1,6 @@
 import os
 from setuptools import setup
 
-# Quick and dirty fix for http://bugs.python.org/issue8876
-if os.environ.get('USER','') == 'vagrant':
-    del os.link
-
 with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     README = readme.read()
 
@@ -12,7 +8,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-social-widgets',
-    version='0.2.0',
+    version='0.2.1',
     packages=['social_widgets'],
     include_package_data=True,
     license='MIT License',
@@ -23,7 +19,7 @@ setup(
     keywords='Django, social network, template, facebook, twitter',
     url='https://github.com/creafz/django-social-widgets',
     download_url=
-    'https://github.com/creafz/django-social-widgets/tarball/0.2.0',
+    'https://github.com/creafz/django-social-widgets/tarball/0.2.1',
     author='Alex Parinov',
     author_email='creafz@gmail.com',
     classifiers=[

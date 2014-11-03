@@ -1,6 +1,10 @@
 Changelog
 =========
 
+Version 0.2.1 - 2014-11-03
+--------------------------
+* Minor setup.py fixes
+
 Version 0.2.0 - 2014-11-03
 --------------------------
 * Updated tests
