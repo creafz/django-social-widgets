@@ -40,6 +40,10 @@ class IncorrectDataTest(TestCase):
         self.assertRaises(TemplateSyntaxError,
                           render_string, "{% social_widget_render x==2 %}")
 
+    def test_incorrect_key_value_argument(self):
+        self.assertRaises(TemplateSyntaxError,
+                          render_string, "{% social_widget_render "
+                                         "'facebook/likebox.html' x==2%}")
 
 class TestToDataStringWithDefaultFilter(TestCase):
     def test_true(self):
@@ -68,5 +72,6 @@ class TestToDataStringWithDefaultFilter(TestCase):
 class TestGetItemFilter(TestCase):
     def test_get_item(self):
         dictionary = {"key": "value"}
-        html = render_string("{{ dictionary|get_item:'key' }}", {"dictionary": dictionary})
+        html = render_string("{{ dictionary|get_item:'key' }}",
+                             {"dictionary": dictionary})
         self.assertEqual(html, "value")
