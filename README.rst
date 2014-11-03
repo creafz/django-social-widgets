@@ -2,6 +2,16 @@
 Django Social Widgets
 =====================
 
+.. image:: https://pypip.in/download/django-social-widgets/badge.svg
+    :target: https://pypi.python.org/pypi/django-social-widgets/
+    :alt: Downloads
+
+.. image:: https://travis-ci.org/creafz/django-social-widgets.svg?branch=master
+    :target: https://travis-ci.org/creafz/django-social-widgets
+
+.. image:: https://coveralls.io/repos/creafz/django-social-widgets/badge.png?branch=master
+    :target: https://coveralls.io/r/creafz/django-social-widgets?branch=master
+
 Django app for easy embedding social network widgets and plugins into your site. Supports Facebook, Twitter, Google+, YouTube, Instagram and Pinterest.
 
 Useful links:  `Documentation <https://django-social-widgets.readthedocs.org/en/latest/>`_, `Demo <https://creafz.github.io/django-social-widgets/index.html>`_.
