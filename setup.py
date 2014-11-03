@@ -1,6 +1,10 @@
 import os
 from setuptools import setup
 
+# Quick and dirty fix for http://bugs.python.org/issue8876
+if os.environ.get('USER','') == 'vagrant':
+    del os.link
+
 with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     README = readme.read()
 
