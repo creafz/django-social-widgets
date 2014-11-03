@@ -1,0 +1,102 @@
+body {
+    padding: 20px;;
+}
+
+.social-network-name {
+    text-align: center;
+}
+
+.social-widget-name {
+    text-align: center;
+}
+
+a.copy-to-clipboard {
+    display: block;
+    float: right;
+    border-bottom: 1px dotted;
+    font-weight: normal;
+    padding-top: 10px;
+    font-size: 13px;
+}
+
+button.copy-to-clipboard {
+    float: right;
+    font-weight: normal;
+}
+
+a.copy-to-cliboard:hover {
+    text-decoration: none;
+}
+
+.code-title {
+    float: left;
+}
+
+
+.social-widget-example {
+    padding: 10px 15px;
+    background-color: #fdfdfd;
+    margin-bottom: 25px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.code-sample {
+    margin-bottom: 15px;
+    white-space: nowrap;
+}
+
+.external-docs {
+    margin-top: 30px;
+}
+
+.copy-to-clipboard.zeroclipboard-is-hover, .copy-to-clipboard.zeroclipboard-is-active {
+    color: #222;
+    background-color: #eee;
+    border-color: #ccc;
+}
+
+
+.zero-clipboard {
+position: relative;
+}
+
+
+span.copy-to-clipboard {
+position: absolute;
+top: 0;
+right: 0;
+z-index: 10;
+display: block;
+padding: 5px 8px;
+font-size: 12px;
+color: #444;
+cursor: pointer;
+background-color: #FFF;
+border: 1px solid #ddd;
+border-radius: 0 4px 0 4px;
+
+}
+
+.show-widget-settings {
+    font-size: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted;
+    display: inline-block;
+}
+
+.show-widget-settings:hover {
+    text-decoration: none;
+}
+
+.widget-settings-table {
+    margin-top: 5px;
+    display: none;
+}
+
+.widget-settings-table > tbody > tr > td:first-child {
+    font-weight: bold;
+}
+.widget-list > li > a {
+    font-weight: bold;
+}

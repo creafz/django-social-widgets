@@ -1,0 +1,1180 @@
+{% load staticfiles %}
+{% load social_widgets %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Django Social Widgets settings and examples.</title>
+      <link rel="stylesheet"
+         href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="{% static "example/css/main.css" %}">
+      <style>
+      </style>
+   </head>
+   <body>
+      <a href="https://github.com/creafz/django-social-widgets"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+      <div class="container">
+         <div class="row">
+            <div class="col-xs-12">
+               <h3 class="text-center">  Django Social Widgets Demo.
+                   <a href="https://github.com/creafz/django-social-widgets">Show source</a> on GitHub.
+               <a href="https://django-social-widgets.readthedocs.org/en/latest/index.html">Show Documentation</a></h3>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-xs-12">
+               <h4>Widgets</h4>
+               <ul class="list-unstyled widget-list">
+                  <li>
+                     <a href="#facebook">Facebook</a>
+                     <ul>
+                        <li><a href="#facebook-likebox">Likebox</a></li>
+                        <li><a href="#facebook-follow-button">Follow Button</a></li>
+                        <li><a href="#facebook-embedded-post">Embedded Post</a></li>
+                        <li><a href="#facebook-activity-feed">Activity Feed</a></li>
+                        <li><a href="#facebook-recommendations-feed">Recommendations Feed</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#twitter">Twitter</a>
+                     <ul>
+                        <li><a href="#twitter">Follow Button</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#google-plus">Google+ and YouTube</a>
+                     <ul>
+                        <li><a href="#google-plus-person-badge">Google+ Person Badge</a></li>
+                        <li><a href="#google-plus-page-badge">Google+ Page Badge</a></li>
+                        <li><a href="#google-plus-community-badge">Google+ Community Badge</a></li>
+                        <li><a href="#youtube-subscribe-button">YouTube Subscribe Button</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#instagram">Instagram</a>
+                     <ul>
+                        <li><a href="#instagram-badge">Instagram Badge</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#pinterest">Pinterest</a>
+                     <ul>
+                        <li><a href="#pinterest-follow-button">Follow Button</a></li>
+                        <li><a href="#pinterest-pin-widget">Pin Widget</a></li>
+                        <li><a href="#pinterest-profile-widget">Profile Widget</a></li>
+                        <li><a href="#pinterest-board-widget">Board Widget</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <h2 class="social-network-name" id="facebook">Facebook</h2>
+         <div class="social-widget-example">
+            <h4 class="social-widget-name" id="facebook-likebox">Facebook Likebox</h4>
+            <div class="row">
+               <div class="col-xs-4">
+                  {% social_widget_render "facebook/likebox.html" href="https://www.facebook.com/FacebookDevelopers" %}
+               </div>
+               <div class="col-xs-8">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Minimal Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">{% verbatim %}{% social_widget_render "facebook/likebox.html" href="https://www.facebook.com/FacebookDevelopers" %}{% endverbatim %}</pre>
+                  </div>
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">{% verbatim %}
+                    {% social_widget_render "facebook/likebox.html" locale="en_US" app_id=12345678 href="https://www.facebook.com/FacebookDevelopers" height=300 colorscheme="light" force_wall=False header=True show_border=True show_faces=True stream=False width=300 %}{% endverbatim %}</pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>locale</td>
+                              <td>Used to determine the language of the widget.</td>
+                              <td>Django locale (en_US by default)</td>
+                           </tr>
+                           <tr>
+                              <td>app_id</td>
+                              <td>Facebook Application ID.</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>colorscheme</td>
+                              <td>The color scheme used by the plugin. Can be "light" or "dark".</td>
+                              <td>"light"</td>
+                           </tr>
+                           <tr>
+                              <td>force_wall</td>
+                              <td>For "place" Pages (Pages that have a physical location that can be used with check-ins), this specifies whether the stream contains posts by the Page or just check-ins from friends.</td>
+                              <td>False</td>
+                           </tr>
+                           <tr>
+                              <td>header</td>
+                              <td>Specifies whether to display the Facebook header at the top of the plugin.</td>
+                              <td>True</td>
+                           </tr>
+                           <tr>
+                              <td>height</td>
+                              <td>The height of the plugin in pixels. The default height varies based on number of faces to display, and whether the stream is displayed. With stream set to True and 10 photos displayed (via show_faces) the default height is 556px. With stream and show_faces both False, the default height is 63px.</td>
+                              <td>Varies, see left.</td>
+                           </tr>
+                           <tr>
+                              <td>href</td>
+                              <td>The absolute URL of the Facebook Page that will be liked. This is a required setting.</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>show_border</td>
+                              <td>Specifies whether or not to show a border around the plugin.</td>
+                              <td>True</td>
+                           </tr>
+                           <tr>
+                              <td>show_faces</td>
+                              <td>Specifies whether to display profile photos of people who like the page.</td>
+                              <td>True</td>
+                           </tr>
+                           <tr>
+                              <td>stream</td>
+                              <td>Specifies whether to display a stream of the latest posts by the Page.</td>
+                              <td>False</td>
+                           </tr>
+                           <tr>
+                              <td>width</td>
+                              <td>The width of the plugin in pixels. Minimum is 292.</td>
+                              <td>300</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="https://developers.facebook.com/docs/plugins/like-box-for-pages" target="_blank">https://developers.facebook.com/docs/plugins/like-box-for-pages</a></p>
+               </div>
+            </div>
+         </div>
+         <div class="social-widget-example">
+            <h4 class="social-widget-name" id="facebook-follow-button">Facebook Follow Button</h4>
+            <div class="row">
+               <div class="col-xs-5">
+                  {% social_widget_render "facebook/follow_button.html" href="https://www.facebook.com/zuck" %}
+               </div>
+               <div class="col-xs-7">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Minimal Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">       {% verbatim %}{% social_widget_render "facebook/follow_button.html" href="https://www.facebook.com/zuck" %}{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">       {% verbatim %}{% social_widget_render "facebook/follow_button.html" href="https://www.facebook.com/zuck" locale="en_US" app_id=12345678 width=300 height=100 colorscheme="light" kid_directed_site=False layout="standard" show_faces=False %}{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>locale</td>
+                              <td>Used to determine the language of the widget.</td>
+                              <td>Django locale (en_US by default)</td>
+                           </tr>
+                           <tr>
+                              <td>app_id</td>
+                              <td>Facebook Application ID.</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>colorscheme</td>
+                              <td>The color scheme used by the plugin. Can be "light" or "dark".</td>
+                              <td>"light"</td>
+                           </tr>
+                           <tr>
+                              <td>href</td>
+                              <td>The Facebook.com profile URL of the user to follow.</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>kid_directed_site</td>
+                              <td>If your web site or online service, or a portion of your service, is directed to children under 13 <a target="_blank" href="https://developers.facebook.com/docs/plugins/restrictions/">you must enable this</a></td>
+                              <td>"False"</td>
+                           </tr>
+                           <tr>
+                              <td>layout</td>
+                              <td>Selects one of the different layouts that are available for the plugin. Can be one of "standard", "button_count", or "box_count". See the <a target="_blank" href="https://developers.facebook.com/docs/plugins/follow-button#faqlayouts">FAQ</a> for more details.</td>
+                              <td>"standard"</td>
+                           </tr>
+                           <tr>
+                              <td>show_faces</td>
+                              <td>Specifies whether to display profile photos below the button (standard layout only). You must not enable this on <a target="_blank" href="https://developers.facebook.com/docs/plugins/restrictions/">child-directed sites</a>.</td>
+                              <td>"False"</td>
+                           </tr>
+                           <tr>
+                              <td>width</td>
+                              <td>The width of the plugin. The layout you choose affects the minimum and default widths you can use, please see the <a target="_blank" href="https://developers.facebook.com/docs/plugins/follow-button#faqlayout">FAQ</a> for more details.</td>
+                              <td><a target="_blank" href="https://developers.facebook.com/docs/plugins/follow-button#faqlayout">Depends on layout</a></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="https://developers.facebook.com/docs/plugins/follow-button" target="_blank">https://developers.facebook.com/docs/plugins/follow-button</a></p>
+               </div>
+            </div>
+         </div>
+         <div class="social-widget-example">
+            <h4 class="social-widget-name" id="facebook-embedded-post">Facebook Embedded Post</h4>
+            <div class="row">
+               <div class="col-xs-6">
+                  {% social_widget_render "facebook/embedded_post.html" href="https://www.facebook.com/FacebookDevelopers/posts/10151471074398553" %}
+               </div>
+               <div class="col-xs-6">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Minimal Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">       {% verbatim %}{% social_widget_render "facebook/embedded_post.html" href="https://www.facebook.com/FacebookDevelopers/posts/10151471074398553" %}{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">       {% verbatim %}{% social_widget_render "facebook/embedded_post.html" locale="en_US" app_id=12345678 href="https://www.facebook.com/FacebookDevelopers/posts/10151471074398553" width=500 %}{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>locale</td>
+                              <td>Used to determine the language of the widget.</td>
+                              <td>Django locale (en_US by default)</td>
+                           </tr>
+                           <tr>
+                              <td>app_id</td>
+                              <td>Facebook Application ID.</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>href</td>
+                              <td>The absolute URL of the Post that will be embedded.</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>width</td>
+                              <td>The pixel width of the post (between 350 and 750)</td>
+                              <td>500</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="https://developers.facebook.com/docs/plugins/embedded-posts" target="_blank">https://developers.facebook.com/docs/plugins/embedded-posts</a></p>
+               </div>
+            </div>
+         </div>
+         <div class="social-widget-example">
+            <h4 class="social-widget-name" id="facebook-activity-feed">Facebook Activity Feed</h4>
+            <div class="row">
+               <div class="col-xs-4">
+                  {% social_widget_render "facebook/activity_feed.html" site="developers.facebook.com" %}        
+               </div>
+               <div class="col-xs-8">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Minimal Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">{% verbatim %}{% social_widget_render "facebook/activity_feed.html" site="developers.facebook.com" %}{% endverbatim %}</pre>
+                  </div>
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">{% verbatim %}{% social_widget_render "facebook/activity_feed.html" locale="en_US" app_id=12345678 site="developers.facebook.com" action="likes, recommends" colorscheme="light" header=True height=300 linktarget="_blank" max_age=0 recommendations=False width=300 %}{% endverbatim %}</pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>locale</td>
+                              <td>Used to determine the language of the widget.</td>
+                              <td>Django locale (en_US by default)</td>
+                           </tr>
+                           <tr>
+                              <td>app_id</td>
+                              <td>Facebook Application ID.</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>action</td>
+                              <td>A comma-separated list of <a target="_blank" href="https://developers.facebook.com/docs/opengraph/creating-action-types/">Open Graph action types</a> to show in the feed.</td>
+                              <td>Any action type</td>
+                           </tr>
+                           <tr>
+                              <td>app_id</td>
+                              <td>Display all actions associated with this app ID. This is usually inferred from the app ID you use to initiate the [JavaScript SDK].</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>colorscheme</td>
+                              <td>The color scheme used by the plugin. Can be "light" or "dark".</td>
+                              <td>"light"</td>
+                           </tr>
+                           <tr>
+                              <td>filter</td>
+                              <td>Allows you to filter which URLs are shown in the plugin. For example, if the site parameter is set to 'www.example.com' and the filterparameter was set to '/section1/section2' then only pages which matched 'http://www.example.com/section1/section2/*' would be included in the activity feed section of this plugin. This filter does not apply to any recommendations which may appear in this plugin (see recommendations setting).</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>header</td>
+                              <td>Show the "Recent Activity" header above the feed. Can be "True" or "False"</td>
+                              <td>"True"</td>
+                           </tr>
+                           <tr>
+                              <td>height</td>
+                              <td>The height of the plugin in pixels.</td>
+                              <td>300</td>
+                           </tr>
+                           <tr>
+                              <td>linktarget</td>
+                              <td>Determines what happens when people click on the links in the feed. Can be any of the <a target="_blank" href="http://www.w3schools.com/tags/att_a_target.asp">standard HTML target values</a>.</td>
+                              <td>"_blank"</td>
+                           </tr>
+                           <tr>
+                              <td>max_age</td>
+                              <td>Limit the created time of articles that are shown in the feed. Valid values are 1-180, which represents the age in days to limit to.</td>
+                              <td>0 (no limit)</td>
+                           </tr>
+                           <tr>
+                              <td>recommendations</td>
+                              <td>Specifies whether to always show recommendations (Articles liked by a high amount of people) in the bottom half of the feed. Can be "True" or "False".</td>
+                              <td>"False"</td>
+                           </tr>
+                           <tr>
+                              <td>ref</td>
+                              <td>A label for tracking referrals which must be less than 50 characters and can contain alphanumeric characters and some punctuation (currently +/=-.:_). See the <a target="_blank" href="https://developers.facebook.com/docs/plugins/activity#faqref">FAQ</a> for more details.</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>site</td>
+                              <td>The domain for which to show activity.</td>
+                              <td>Current domain</td>
+                           </tr>
+                           <tr>
+                              <td>width</td>
+                              <td>The width of the plugin in pixels.</td>
+                              <td>300</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="https://developers.facebook.com/docs/plugins/activity" target="_blank">https://developers.facebook.com/docs/plugins/activity</a></p>
+               </div>
+            </div>
+         </div>
+         <div class="social-widget-example">
+            <h4 class="social-widget-name" id="facebook-recommendations-feed">Facebook Recommendations Feed</h4>
+            <div class="row">
+               <div class="col-xs-4">
+                  {% social_widget_render "facebook/recommendations_feed.html" site="developers.facebook.com" %}
+               </div>
+               <div class="col-xs-8">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Minimal Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">{% verbatim %}
+            {% social_widget_render "facebook/recommendations_feed.html" site="developers.facebook.com" %}
+
+
+                    {% endverbatim %}
+
+                </pre>
+                  </div>
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">{% verbatim %}
+                    {% social_widget_render "facebook/recommendations_feed.html" locale="en_US" app_id=12345678 site="developers.facebook.com" ref="page_ref" action="likes, recommends" colorscheme="light" header=True height=300 linktarget="_blank" max_age=0 width=300 %}
+
+                    {% endverbatim %}</pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>locale</td>
+                              <td>Used for widget localization</td>
+                              <td>Django locale (en_US by default)</td>
+                           </tr>
+                           <tr>
+                              <td>app_id</td>
+                              <td>Facebook Application ID.</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>action</td>
+                              <td>A comma-separated list of <a target="_blank" href="https://developers.facebook.com/docs/opengraph/creating-action-types/">Open Graph action types</a> to show in the feed.</td>
+                              <td>Any action type</td>
+                           </tr>
+                           <tr>
+                              <td>app_id</td>
+                              <td>Display all actions associated with this app ID. This is usually inferred from the app ID you use to initiate the [JavaScript SDK].</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>colorscheme</td>
+                              <td>The color scheme used by the plugin. Can be "light" or "dark".</td>
+                              <td>"light"</td>
+                           </tr>
+                           <tr>
+                              <td>header</td>
+                              <td>Show the "Recent Activity" header above the feed. Can be "True" or "False"</td>
+                              <td>"True"</td>
+                           </tr>
+                           <tr>
+                              <td>height</td>
+                              <td>The height of the plugin in pixels.</td>
+                              <td>300</td>
+                           </tr>
+                           <tr>
+                              <td>linktarget</td>
+                              <td>Determines what happens when people click on the links in the feed. Can be any of the <a target="_blank" href="http://www.w3schools.com/tags/att_a_target.asp">standard HTML target values</a>.</td>
+                              <td>"_blank"</td>
+                           </tr>
+                           <tr>
+                              <td>max_age</td>
+                              <td>Limit the created time of articles that are shown in the feed. Valid values are 1-180, which represents the age in days to limit to.</td>
+                              <td>0 (no limit)</td>
+                           </tr>
+                           <tr>
+                              <td>ref</td>
+                              <td>A label for tracking referrals which must be less than 50 characters and can contain alphanumeric characters and some punctuation (currently +/=-.:_). See the <a target="_blank" href="https://developers.facebook.com/docs/plugins/activity#faqref">FAQ</a> for more details.</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>site</td>
+                              <td>The domain for which to show activity.</td>
+                              <td>Current domain</td>
+                           </tr>
+                           <tr>
+                              <td>width</td>
+                              <td>The width of the plugin in pixels.</td>
+                              <td>300</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="https://developers.facebook.com/docs/plugins/recommendations" target="_blank">https://developers.facebook.com/docs/plugins/recommendations</a></p>
+               </div>
+            </div>
+         </div>
+         <h2 class="social-network-name" id="twitter">Twitter</h2>
+         <div class="social-widget-example">
+            <h4 class="social-widget-name" id="twitter-follow-button">Twitter Follow Button</h4>
+            <div class="row">
+               <div class="col-xs-4">
+                  {% social_widget_render "twitter/follow_button.html" username="BillGates" %}
+               </div>
+               <div class="col-xs-8">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Minimal Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">       {% verbatim %}{% social_widget_render "twitter/follow_button.html" username="BillGates" %}{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">       {% verbatim %}{% social_widget_render "twitter/follow_button.html" username="BillGates" show_screen_name=True show_count=False size="medium" dnt=False %}{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Username</td>
+                              <td>Username to follow (without @)</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>lang</td>
+                              <td>Language of the follow button. Available languages: English (en), French (fr), German (de), Italian (it), Spanish (es), Korean (ko) and Japanese (ja).</td>
+                              <td>en</td>
+                           </tr>
+                           <tr>
+                              <td>width</td>
+                              <td>Width of the Follow Button</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>align</td>
+                              <td>Alignment of the Follow Button. Can either be "left" or "right".</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>show_screen_name</td>
+                              <td>The user’s screen name shows up by default, but you can opt not to show the screen name in the button.</td>
+                              <td>True</td>
+                           </tr>
+                           <tr>
+                              <td>size</td>
+                              <td>The size of the button can render in either “medium”, which is the default size, or in “large” - which is the larger button.</td>
+                              <td>"medium"</td>
+                           </tr>
+                           <tr>
+                              <td>dnt</td>
+                              <td>Enable or disable Do Not Track feature. <a target="_blank" href="https://support.twitter.com/articles/20169421">More information</a>.</td>
+                              <td>False</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="https://dev.twitter.com/web/follow-button" target="_blank">https://dev.twitter.com/web/follow-button</a></p>
+               </div>
+            </div>
+         </div>
+         <h2 class="social-network-name" id="google-plus">Google+ and YouTube</h2>
+         <div class="social-widget-example">
+            <h4 class="social-widget-name" id="google-plus-person-badge">Google+ Person Badge</h4>
+            <div class="row">
+               <div class="col-xs-4">
+                  {% social_widget_render "google/plus_person_badge.html" href="https://plus.google.com/+SergeyBrin" %}
+               </div>
+               <div class="col-xs-8">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Minimal Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">       {% verbatim %}{% social_widget_render "google/plus_person_badge.html" href="https://plus.google.com/+SergeyBrin" %}{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">       {% verbatim %}{% social_widget_render "google/plus_person_badge.html" language="en-US" href="https://plus.google.com/+SergeyBrin" layout="portrait" showcoverphoto=True showtagline=True theme="light" width=300 %}{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>language</td>
+                              <td>Language of the Google+ badge</td>
+                              <td>"en-US"</td>
+                           </tr>
+                           <tr>
+                              <td>href</td>
+                              <td>URL to the Google+ page</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>layout</td>
+                              <td>Sets the orientation of the badge. Can either be "landscape" or "portrait".</td>
+                              <td>"portrait"</td>
+                           </tr>
+                           <tr>
+                              <td>showcoverphoto</td>
+                              <td>Displays the cover photo in the badge if set to true and the photo exists</td>
+                              <td>True</td>
+                           </tr>
+                           <tr>
+                              <td>showtagline</td>
+                              <td>Displays the user's tag line if set to true.</td>
+                              <td>True</td>
+                           </tr>
+                           <tr>
+                              <td>theme</td>
+                              <td>The color theme of the badge. Use dark when placing the badge on a page with a dark background.</td>
+                              <td>"light"</td>
+                           </tr>
+                           <tr>
+                              <td>width</td>
+                              <td>The pixel width of the badge to render. The following ranges are valid: Portrait layout (180-450 pixels), Landscape layout (273-450 pixels)</td>
+                              <td>300</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="https://developers.google.com/+/web/badge/#person-badge" target="_blank">https://developers.google.com/+/web/badge/#person-badge</a></p>
+               </div>
+            </div>
+         </div>
+         <div class="social-widget-example">
+            <h4 class="social-widget-name" id="google-plus-page-badge">Google+ Page Badge</h4>
+            <div class="row">
+               <div class="col-xs-4">
+                  {% social_widget_render "google/plus_page_badge.html" href="https://plus.google.com/110967630299632321627" %}
+               </div>
+               <div class="col-xs-8">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Minimal Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">    {% verbatim %}{% social_widget_render "google/plus_page_badge.html" href="https://plus.google.com/110967630299632321627" %}{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">    {% verbatim %}{% social_widget_render "google/plus_page_badge.html" language="en-US" href="https://plus.google.com/110967630299632321627" layout="portrait" showcoverphoto=True showtagline=True theme="light" width=300 %}{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>language</td>
+                              <td>Language of the Google+ badge</td>
+                              <td>"en-US"</td>
+                           </tr>
+                           <tr>
+                              <td>href</td>
+                              <td>URL to the Google+ page</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>layout</td>
+                              <td>Sets the orientation of the badge. Can either be "landscape" or "portrait".</td>
+                              <td>"portrait"</td>
+                           </tr>
+                           <tr>
+                              <td>showcoverphoto</td>
+                              <td>Displays the cover photo in the badge if set to true and the photo exists</td>
+                              <td>True</td>
+                           </tr>
+                           <tr>
+                              <td>showtagline</td>
+                              <td>Displays the user's tag line if set to true.</td>
+                              <td>True</td>
+                           </tr>
+                           <tr>
+                              <td>theme</td>
+                              <td>The color theme of the badge. Use dark when placing the badge on a page with a dark background.</td>
+                              <td>"light"</td>
+                           </tr>
+                           <tr>
+                              <td>width</td>
+                              <td>The pixel width of the badge to render. The following ranges are valid: Portrait layout (180-450 pixels), Landscape layout (273-450 pixels)</td>
+                              <td>300</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="https://developers.google.com/+/web/badge/#page-badge" target="_blank">https://developers.google.com/+/web/badge/#page-badge</a></p>
+               </div>
+            </div>
+         </div>
+         <div class="social-widget-example">
+            <h4 class="social-widget-name" id="google-plus-community-badge">Google+ Community Badge</h4>
+            <div class="row">
+               <div class="col-xs-4">
+                  {% social_widget_render "google/plus_community_badge.html" href="https://plus.google.com/communities/113527920160449995981" %}
+               </div>
+               <div class="col-xs-8">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Minimal Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">    {% verbatim %}{% social_widget_render "google/plus_community_badge.html" href="https://plus.google.com/communities/113527920160449995981" %}{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">    {% verbatim %}{% social_widget_render "google/plus_community_badge.html" language="en-US" href="https://plus.google.com/communities/113527920160449995981" layout="portrait" showphoto=True showowners=False showtagline=True theme="light" width=300 %}{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>language</td>
+                              <td>Language of the Google+ badge</td>
+                              <td>"en-US"</td>
+                           </tr>
+                           <tr>
+                              <td>href</td>
+                              <td>URL to the Google+ page</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>layout</td>
+                              <td>Sets the orientation of the badge. Can either be "landscape" or "portrait".</td>
+                              <td>"portrait"</td>
+                           </tr>
+                           <tr>
+                              <td>showphoto</td>
+                              <td>Displays the community profile photo if set to true and the photo exists.</td>
+                              <td>True</td>
+                           </tr>
+                           <tr>
+                              <td>showowners</td>
+                              <td>Displays a list of community owners if set to true.</td>
+                              <td>False</td>
+                           </tr>
+                           <tr>
+                              <td>showtagline</td>
+                              <td>Displays the user's tag line if set to true.</td>
+                              <td>True</td>
+                           </tr>
+                           <tr>
+                              <td>theme</td>
+                              <td>The color theme of the badge. Use dark when placing the badge on a page with a dark background.</td>
+                              <td>"light"</td>
+                           </tr>
+                           <tr>
+                              <td>width</td>
+                              <td>The pixel width of the badge to render. The following ranges are valid: Portrait layout (180-450 pixels), Landscape layout (273-450 pixels)</td>
+                              <td>300</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="https://developers.google.com/+/web/badge/#community-badge" target="_blank">https://developers.google.com/+/web/badge/#community-badge</a></p>
+               </div>
+            </div>
+         </div>
+         <div class="social-widget-example">
+            <h4 class="social-widget-name" id="youtube-subscribe-button">YouTube Subscribe Button</h4>
+            <div class="row">
+               <div class="col-xs-3">
+                  {% social_widget_render "google/youtube_subscribe_button.html" channel="GoogleDevelopers" %}
+               </div>
+               <div class="col-xs-9">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">    {% verbatim %}{% social_widget_render "google/youtube_subscribe_button.html" channel="GoogleDevelopers" %}{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">    {% verbatim %}{% social_widget_render "google/youtube_subscribe_button.html" channel="GoogleDevelopers" theme="default" layout="default" count="default" %}{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>language</td>
+                              <td>Language of the button</td>
+                              <td>"en-US"</td>
+                           </tr>
+                           <tr>
+                              <td>channel</td>
+                              <td>The name of the channel associated with the button</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>layout</td>
+                              <td>The format for the button. Can either be "default" or "full"</td>
+                              <td>"default"</td>
+                           </tr>
+                           <tr>
+                              <td>theme</td>
+                              <td>Specifies the color scheme to use for the button. Can either be "default" or "dark"</td>
+                              <td>"default"</td>
+                           </tr>
+                           <tr>
+                              <td>count</td>
+                              <td>Indicates whether the button displays the number of subscribers that the channel has. Can either be "default" or "count".</td>
+                              <td>"default"</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="https://developers.google.com/youtube/youtube_subscribe_button" target="_blank">https://developers.google.com/youtube/youtube_subscribe_button</a></p>
+               </div>
+            </div>
+         </div>
+         <h2 class="social-network-name" id="instagram">Instagram</h2>
+         <div class="social-widget-example">
+            <h4 class="social-widget-name" id="instagram-badge">Instagram Badge</h4>
+            <div class="row">
+               <div class="col-xs-3">
+                  {% social_widget_render "instagram/badge.html" size=32 username="nike" %}
+               </div>
+               <div class="col-xs-9">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Minimal Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">    {% verbatim %}{% social_widget_render "instagram/badge.html" username="nike" %}{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">    {% verbatim %}{% social_widget_render "instagram/badge.html" size=32 username="nike" %}{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>username</td>
+                              <td>Instagram username</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>size</td>
+                              <td>Size of the badge in pixels. Can either be 16, 32 or 64.</td>
+                              <td>32</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="http://instagram.com/accounts/badges/" target="_blank">http://instagram.com/accounts/badges/</a></p>
+               </div>
+            </div>
+         </div>
+         <h2 class="social-network-name" id="pinterest">Pinterest</h2>
+         <div class="social-widget-example">
+            <h4 class="social-widget-name" id="pinterest-follow-button">Pinterest Follow Button</h4>
+            <div class="row">
+               <div class="col-xs-3">
+                  {% social_widget_render "pinterest/follow_button.html" href="http://www.pinterest.com/pinterest/" fullname="Pinterest" %}
+               </div>
+               <div class="col-xs-9">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">    {% verbatim %}        {% social_widget_render "pinterest/follow_button.html" href="http://www.pinterest.com/pinterest/" fullname="Pinterest" %}
+{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>href</td>
+                              <td>Pinterest User URL</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>fullname</td>
+                              <td>User fullname that will be shown on the button</td>
+                              <td>None</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="https://business.pinterest.com/en/widget-builder#do_follow_me_button" target="_blank">https://business.pinterest.com/en/widget-builder#do_follow_me_button</a></p>
+               </div>
+            </div>
+         </div>
+         <div class="social-widget-example">
+            <h4 class="social-widget-name" id="pinterest-pin-widget">Pinterest Pin Widget</h4>
+            <div class="row">
+               <div class="col-xs-3">
+                  {% social_widget_render "pinterest/pin_widget.html" href="http://www.pinterest.com/pin/99360735500167749/" %}
+               </div>
+               <div class="col-xs-9">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">    {% verbatim %}
+        {% social_widget_render "pinterest/pin_widget.html" href="http://www.pinterest.com/pin/99360735500167749/" %}
+{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>href</td>
+                              <td>Pinterest Pin URL</td>
+                              <td>None</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="https://business.pinterest.com/en/widget-builder#do_embed_pin" target="_blank">https://business.pinterest.com/en/widget-builder#do_embed_pin</a></p>
+               </div>
+            </div>
+         </div>
+         <div class="social-widget-example">
+            <h4 class="social-widget-name" id="pinterest-profile-widget">Pinterest Profile Widget</h4>
+            <div class="row">
+               <div class="col-xs-4">
+                  {% social_widget_render "pinterest/profile_widget.html" href="http://www.pinterest.com/pinterest/" %}
+               </div>
+               <div class="col-xs-8">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Minimal Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">    {% verbatim %}
+            {% social_widget_render "pinterest/profile_widget.html" href="http://www.pinterest.com/pinterest/" %}
+{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">
+            {% verbatim %}
+            {% social_widget_render "pinterest/profile_widget.html" href="http://www.pinterest.com/pinterest/" pin_scale_width=80 pin_scale_height=320 pin_board_width=400 %}
+
+            {% endverbatim %}
+</pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>href</td>
+                              <td>Pinterest User URL</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>pin_scale_width</td>
+                              <td>Width of a single pin</td>
+                              <td>80</td>
+                           </tr>
+                           <tr>
+                              <td>pin_scale_height</td>
+                              <td>Height of a singe pin</td>
+                              <td>320</td>
+                           </tr>
+                           <tr>
+                              <td>pin_board_width</td>
+                              <td>Width of the widget</td>
+                              <td>400</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="https://business.pinterest.com/en/widget-builder#do_embed_user" target="_blank">https://business.pinterest.com/en/widget-builder#do_embed_user</a></p>
+               </div>
+            </div>
+         </div>
+         <div class="social-widget-example">
+            <h4 class="social-widget-name" id="pinterest-board-widget">Pinterest Board Widget</h4>
+            <div class="row">
+               <div class="col-xs-4">
+                  {% social_widget_render "pinterest/board_widget.html" href="http://www.pinterest.com/pinterest/pin-pets/" %}
+               </div>
+               <div class="col-xs-8">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Minimal Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">    {% verbatim %}
+        {% social_widget_render "pinterest/board_widget.html" href="http://www.pinterest.com/pinterest/pin-pets/" %}
+{% endverbatim %}
+</pre>
+                  </div>
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">
+            {% verbatim %}
+            {% social_widget_render "pinterest/board_widget.html" href="http://www.pinterest.com/pinterest/pin-pets/" pin_scale_width=80 pin_scale_height=320 pin_board_width=400 %}
+
+            {% endverbatim %}
+</pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>href</td>
+                              <td>Pinterest User URL</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>pin_scale_width</td>
+                              <td>Width of a single pin</td>
+                              <td>80</td>
+                           </tr>
+                           <tr>
+                              <td>pin_scale_height</td>
+                              <td>Height of a singe pin</td>
+                              <td>320</td>
+                           </tr>
+                           <tr>
+                              <td>pin_board_width</td>
+                              <td>Width of the widget</td>
+                              <td>400</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="https://business.pinterest.com/en/widget-builder#do_embed_board" target="_blank">https://business.pinterest.com/en/widget-builder#do_embed_board</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+      <script src="{% static "example/js/zeroclipboard.min.js" %}"></script>
+      <script src="{% static "example/js/main.js" %}"></script>
+   </body>
+</html>
