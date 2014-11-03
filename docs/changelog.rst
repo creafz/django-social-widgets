@@ -1,6 +1,12 @@
 Changelog
 =========
 
+Version 0.2.0 - 2014-11-03
+--------------------------
+* Updated tests
+* Added an example project
+* Added PyPi, Read The Docs, Travis CI and Coveralls badges
+
 Version 0.1.2 - 2014-10-13
 --------------------------
 * Documentation updates
