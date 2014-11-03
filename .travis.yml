@@ -15,6 +15,7 @@ matrix:
 
 install:
   - pip install -q Django==$DJANGO --use-mirrors
+  - pip install coveralls
 
 script:
-  - python runtests.py
+  - coverage run runtests.py --source social_widgets
