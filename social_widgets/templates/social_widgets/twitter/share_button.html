@@ -1,0 +1,5 @@
+{% extends "social_widgets/twitter/_base.html" %}
+{% load social_widgets %}
+{% block widget %}
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ username }}" data-url="{{ href }}" data-count="none" data-dnt="true">Tweet</a>
+{% endblock widget %}
