@@ -151,3 +151,13 @@ def social_widget_render(parser, token):
                 args.append(parser.compile_filter(value))
 
     return SocialWidgetNode(args, kwargs)
+
+@register.assignment_tag
+def social_get_facebook_locale(locale):
+    """
+     Try to detect the lang code to use for facebook api url
+    """
+    if locale == 'it':
+        return 'it_IT'
+
+    return 'en_US'

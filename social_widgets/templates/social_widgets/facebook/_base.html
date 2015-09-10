@@ -1,5 +1,7 @@
 {% load social_widgets %}
+{% load i18n %}
 {% block javascript %}
+{% social_get_facebook_locale locale as locale %}
 {% if nojs or widget_service in social_widgets_javascript %}
    {# Do not load JavaScript then #}
 {% else %}
