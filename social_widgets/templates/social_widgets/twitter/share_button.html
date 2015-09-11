@@ -1,5 +1,7 @@
 {% extends "social_widgets/twitter/_base.html" %}
 {% load social_widgets %}
 {% block widget %}
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ username }}" data-url="{{ href }}" data-count="none" data-dnt="true">Tweet</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ username }}" data-url="{{ href }}"
+        {% if related %}data-related="{{ related }}"{% endif %}{% if hashtag %}data-hashtags="{{ hashtag }}"{% endif %}
+        {% if count_layout %}data-count="{{ count_layout }}"{% else %}data-count="none"{% endif %}>Tweet</a>
 {% endblock widget %}
