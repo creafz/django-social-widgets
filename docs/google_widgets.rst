@@ -146,3 +146,30 @@ YouTube Subscribe Button
 * Demo: https://creafz.github.io/django-social-widgets/index.html#youtube-subscribe-button
 
 * Google documentation: https://developers.google.com/youtube/youtube_subscribe_button
+
+
+Google+ Share Button
+--------------------
+
+* Minimal code::
+
+    {% social_widget_render "google/plus_share_button.html" href="https://www.google.com" %}
+
+* Full code::
+
+   {% social_widget_render "google/plus_share_button.html" language="en-US" href="https://plus.google.com/communities/113527920160449995981" layout="portrait" showphoto=True showowners=False showtagline=True theme="light" width=300 %}
+
+
+**Parameters**
+
+================ ================================================================================================================================================ ===============
+**Parameter**        Description                                                                                                                                      Default
+================ ================================================================================================================================================ ===============
+**language**         Language of the Google+ badge                                                                                                                    "en-US"
+---------------- ------------------------------------------------------------------------------------------------------------------------------------------------ ---------------
+**href**             URL to share                                                                                                                                     None
+---------------- ------------------------------------------------------------------------------------------------------------------------------------------------ ---------------
+**annotation**       Widget style                                                                                                                                     "none"
+================ ================================================================================================================================================ ===============
+
+* Google documentation: https://developers.google.com/+/web/share/

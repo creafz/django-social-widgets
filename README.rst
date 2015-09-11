@@ -74,16 +74,19 @@ Facebook
 * Embedded Post - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/facebook_widgets.html#embedded-post>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#facebook-embedded-post>`__
 * Activity Feed - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/facebook_widgets.html#activity-feed>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#facebook-activity-feed>`__
 * Recommendations Feed - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/facebook_widgets.html#recommendations-feed>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#facebook-recommendations-feed>`__
+* Share Button - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/facebook_widgets.html#share-button>`__
 
 Twitter
 -------
 * Follow Button - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/twitter_widgets.html#follow-button>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#twitter>`__
+* Share Button - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/twitter_widgets.html#share-button>`__
 
 Google+
 -------
 * Person Badge - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/google_widgets.html#google-person-badge>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#google-plus-person-badge>`__
 * Page Badge - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/google_widgets.html#google-page-badge>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#google-plus-page-badge>`__
 * Community Badge - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/google_widgets.html#google-community-badge>`__ | `Demo <https://creafz.github.io/django-social-widgets/index.html#google-plus-community-badge>`__
+* Share Button - `Documentation <https://django-social-widgets.readthedocs.org/en/latest/google_widgets.html#google-share-button>`__
 
 YouTube
 -------
