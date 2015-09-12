@@ -241,4 +241,6 @@ Share Button
 **layout**           Share button layout type                                                                                                                                                                                                                                           None
 ================ ================================================================================================================================================================================================================================================================== =====================================
 
+* Demo: http://creafz.github.io/django-social-widgets/index.html#facebook-share-button
+
 * Facebook documentation: https://developers.facebook.com/docs/plugins/share-button

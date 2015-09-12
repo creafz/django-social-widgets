@@ -172,4 +172,6 @@ Google+ Share Button
 **annotation**       Widget style                                                                                                                                     "none"
 ================ ================================================================================================================================================ ===============
 
+* Demo: http://creafz.github.io/django-social-widgets/index.html#google-plus-share-button
+
 * Google documentation: https://developers.google.com/+/web/share/
