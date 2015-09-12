@@ -1,6 +1,11 @@
 Changelog
 =========
 
+Version 0.3.0 - 2015-09-12
+--------------------------
+* Add Facebook, Twitter and Google+ share buttons
+
+
 Version 0.2.1 - 2014-11-03
 --------------------------
 * Minor setup.py fixes
