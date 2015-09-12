@@ -20,7 +20,6 @@
                <a href="https://django-social-widgets.readthedocs.org/en/latest/index.html">Show Documentation</a></h3>
             </div>
          </div>
-
          <div class="row">
             <div class="col-xs-12">
                <h4>Widgets</h4>
@@ -33,12 +32,14 @@
                         <li><a href="#facebook-embedded-post">Embedded Post</a></li>
                         <li><a href="#facebook-activity-feed">Activity Feed</a></li>
                         <li><a href="#facebook-recommendations-feed">Recommendations Feed</a></li>
+                        <li><a href="#facebook-share-button">Share Button</a></li>
                      </ul>
                   </li>
                   <li>
                      <a href="#twitter">Twitter</a>
                      <ul>
-                        <li><a href="#twitter">Follow Button</a></li>
+                        <li><a href="#twitter-follow-button">Follow Button</a></li>
+                        <li><a href="#twitter-share-button">Share Button</a></li>
                      </ul>
                   </li>
                   <li>
@@ -47,6 +48,7 @@
                         <li><a href="#google-plus-person-badge">Google+ Person Badge</a></li>
                         <li><a href="#google-plus-page-badge">Google+ Page Badge</a></li>
                         <li><a href="#google-plus-community-badge">Google+ Community Badge</a></li>
+                        <li><a href="#google-plus-share-button">Google+ Share Button</a></li>
                         <li><a href="#youtube-subscribe-button">YouTube Subscribe Button</a></li>
                      </ul>
                   </li>
@@ -176,16 +178,22 @@
                         <h5 class="code-title">Minimal Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">       {% verbatim %}{% social_widget_render "facebook/follow_button.html" href="https://www.facebook.com/zuck" %}{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "facebook/follow_button.html" href="https://www.facebook.com/zuck" %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="code-container">
                      <div class="clearfix">
                         <h5 class="code-title">Full Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">       {% verbatim %}{% social_widget_render "facebook/follow_button.html" href="https://www.facebook.com/zuck" locale="en_US" app_id=12345678 width=300 height=100 colorscheme="light" kid_directed_site=False layout="standard" show_faces=False %}{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                             {% social_widget_render "facebook/follow_button.html" href="https://www.facebook.com/zuck" locale="en_US" app_id=12345678 width=300 height=100 colorscheme="light" kid_directed_site=False layout="standard" show_faces=False %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="widget-settings">
                      <a href="#" class="show-widget-settings">Show widget settings</a>
@@ -257,16 +265,22 @@
                         <h5 class="code-title">Minimal Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">       {% verbatim %}{% social_widget_render "facebook/embedded_post.html" href="https://www.facebook.com/FacebookDevelopers/posts/10151471074398553" %}{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                             {% social_widget_render "facebook/embedded_post.html" href="https://www.facebook.com/FacebookDevelopers/posts/10151471074398553" %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="code-container">
                      <div class="clearfix">
                         <h5 class="code-title">Full Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">       {% verbatim %}{% social_widget_render "facebook/embedded_post.html" locale="en_US" app_id=12345678 href="https://www.facebook.com/FacebookDevelopers/posts/10151471074398553" width=500 %}{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "facebook/embedded_post.html" locale="en_US" app_id=12345678 href="https://www.facebook.com/FacebookDevelopers/posts/10151471074398553" width=500 %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="widget-settings">
                      <a href="#" class="show-widget-settings">Show widget settings</a>
@@ -318,14 +332,22 @@
                         <h5 class="code-title">Minimal Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">{% verbatim %}{% social_widget_render "facebook/activity_feed.html" site="developers.facebook.com" %}{% endverbatim %}</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "facebook/activity_feed.html" site="developers.facebook.com" %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="code-container">
                      <div class="clearfix">
                         <h5 class="code-title">Full Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">{% verbatim %}{% social_widget_render "facebook/activity_feed.html" locale="en_US" app_id=12345678 site="developers.facebook.com" action="likes, recommends" colorscheme="light" header=True height=300 linktarget="_blank" max_age=0 recommendations=False width=300 %}{% endverbatim %}</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "facebook/activity_feed.html" locale="en_US" app_id=12345678 site="developers.facebook.com" action="likes, recommends" colorscheme="light" header=True height=300 linktarget="_blank" max_age=0 recommendations=False width=300 %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="widget-settings">
                      <a href="#" class="show-widget-settings">Show widget settings</a>
@@ -427,23 +449,22 @@
                         <h5 class="code-title">Minimal Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">{% verbatim %}
-            {% social_widget_render "facebook/recommendations_feed.html" site="developers.facebook.com" %}
-
-
-                    {% endverbatim %}
-
-                </pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "facebook/recommendations_feed.html" site="developers.facebook.com" %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="code-container">
                      <div class="clearfix">
                         <h5 class="code-title">Full Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">{% verbatim %}
-                    {% social_widget_render "facebook/recommendations_feed.html" locale="en_US" app_id=12345678 site="developers.facebook.com" ref="page_ref" action="likes, recommends" colorscheme="light" header=True height=300 linktarget="_blank" max_age=0 width=300 %}
-
-                    {% endverbatim %}</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "facebook/recommendations_feed.html" locale="en_US" app_id=12345678 site="developers.facebook.com" ref="page_ref" action="likes, recommends" colorscheme="light" header=True height=300 linktarget="_blank" max_age=0 width=300 %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="widget-settings">
                      <a href="#" class="show-widget-settings">Show widget settings</a>
@@ -523,12 +544,11 @@
                </div>
             </div>
          </div>
-         <h2 class="social-network-name" id="twitter">Twitter</h2>
          <div class="social-widget-example">
-            <h4 class="social-widget-name" id="twitter-follow-button">Twitter Follow Button</h4>
+            <h4 class="social-widget-name" id="facebook-share-button">Facebook Share Button</h4>
             <div class="row">
                <div class="col-xs-4">
-                  {% social_widget_render "twitter/follow_button.html" username="BillGates" %}
+                  {% social_widget_render "facebook/share_button.html" href="developers.facebook.com" %}
                </div>
                <div class="col-xs-8">
                   <div class="code-container">
@@ -536,16 +556,22 @@
                         <h5 class="code-title">Minimal Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">       {% verbatim %}{% social_widget_render "twitter/follow_button.html" username="BillGates" %}{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "facebook/share_button.html" href="developers.facebook.com" %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="code-container">
                      <div class="clearfix">
                         <h5 class="code-title">Full Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">       {% verbatim %}{% social_widget_render "twitter/follow_button.html" username="BillGates" show_screen_name=True show_count=False size="medium" dnt=False %}{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "facebook/share_button.html" locale="en_US" app_id=12345678 href="developers.facebook.com" layout="none" %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="widget-settings">
                      <a href="#" class="show-widget-settings">Show widget settings</a>
@@ -559,7 +585,75 @@
                         </thead>
                         <tbody>
                            <tr>
-                              <td>Username</td>
+                              <td>locale</td>
+                              <td>Used for widget localization</td>
+                              <td>Django locale (en_US by default)</td>
+                           </tr>
+                           <tr>
+                              <td>app_id</td>
+                              <td>Facebook Application ID.</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>href</td>
+                              <td>The absolute URL of the Post that will be embedded.</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>layout</td>
+                              <td>Share button layout type.</td>
+                              <td>None</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="https://developers.facebook.com/docs/plugins/share-button" target="_blank">https://developers.facebook.com/docs/plugins/share-button</a></p>
+               </div>
+            </div>
+         </div>
+         <h2 class="social-network-name" id="twitter">Twitter</h2>
+         <div class="social-widget-example">
+            <h4 class="social-widget-name" id="twitter-follow-button">Twitter Follow Button</h4>
+            <div class="row">
+               <div class="col-xs-4">
+                  {% social_widget_render "twitter/follow_button.html" username="BillGates" %}
+               </div>
+               <div class="col-xs-8">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Minimal Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "twitter/follow_button.html" username="BillGates" %}
+                         {% endverbatim %}
+                     </pre>
+                  </div>
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "twitter/follow_button.html" username="BillGates" show_screen_name=True show_count=False size="medium" dnt=False %}
+                         {% endverbatim %}
+                     </pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>username</td>
                               <td>Username to follow (without @)</td>
                               <td>None</td>
                            </tr>
@@ -600,6 +694,83 @@
                </div>
             </div>
          </div>
+         <div class="social-widget-example">
+            <h4 class="social-widget-name" id="twitter-share-button">Twitter Share Button</h4>
+            <div class="row">
+               <div class="col-xs-4">
+                  {% social_widget_render "twitter/share_button.html" href="http://www.twitter.com" %}
+               </div>
+               <div class="col-xs-8">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Minimal Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "twitter/share_button.html" href="http://www.twitter.com" %}
+                         {% endverbatim %}
+                     </pre>
+                  </div>
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "twitter/share_button.html" href="http://www.twitter.com" username="BillGates" %}
+                         {% endverbatim %}
+                     </pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>username</td>
+                              <td>Username to follow (without @)</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>lang</td>
+                              <td>Language of the follow button. Available languages: English (en), French (fr), German (de), Italian (it), Spanish (es), Korean (ko) and Japanese (ja).</td>
+                              <td>en</td>
+                           </tr>
+                           <tr>
+                              <td>href</td>
+                              <td>Url to share</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>hashtag</td>
+                              <td>Hashtags to add to post</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>related</td>
+                              <td>Related account to this post</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>count</td>
+                              <td>Widget counter layout</td>
+                              <td>"none"</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="https://dev.twitter.com/web/tweet-button" target="_blank">https://dev.twitter.com/web/tweet-button</a></p>
+               </div>
+            </div>
+         </div>
          <h2 class="social-network-name" id="google-plus">Google+ and YouTube</h2>
          <div class="social-widget-example">
             <h4 class="social-widget-name" id="google-plus-person-badge">Google+ Person Badge</h4>
@@ -613,16 +784,22 @@
                         <h5 class="code-title">Minimal Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">       {% verbatim %}{% social_widget_render "google/plus_person_badge.html" href="https://plus.google.com/+SergeyBrin" %}{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "google/plus_person_badge.html" href="https://plus.google.com/+SergeyBrin" %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="code-container">
                      <div class="clearfix">
                         <h5 class="code-title">Full Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">       {% verbatim %}{% social_widget_render "google/plus_person_badge.html" language="en-US" href="https://plus.google.com/+SergeyBrin" layout="portrait" showcoverphoto=True showtagline=True theme="light" width=300 %}{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "google/plus_person_badge.html" language="en-US" href="https://plus.google.com/+SergeyBrin" layout="portrait" showcoverphoto=True showtagline=True theme="light" width=300 %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="widget-settings">
                      <a href="#" class="show-widget-settings">Show widget settings</a>
@@ -689,16 +866,22 @@
                         <h5 class="code-title">Minimal Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">    {% verbatim %}{% social_widget_render "google/plus_page_badge.html" href="https://plus.google.com/110967630299632321627" %}{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "google/plus_page_badge.html" href="https://plus.google.com/110967630299632321627" %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="code-container">
                      <div class="clearfix">
                         <h5 class="code-title">Full Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">    {% verbatim %}{% social_widget_render "google/plus_page_badge.html" language="en-US" href="https://plus.google.com/110967630299632321627" layout="portrait" showcoverphoto=True showtagline=True theme="light" width=300 %}{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "google/plus_page_badge.html" language="en-US" href="https://plus.google.com/110967630299632321627" layout="portrait" showcoverphoto=True showtagline=True theme="light" width=300 %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="widget-settings">
                      <a href="#" class="show-widget-settings">Show widget settings</a>
@@ -765,16 +948,22 @@
                         <h5 class="code-title">Minimal Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">    {% verbatim %}{% social_widget_render "google/plus_community_badge.html" href="https://plus.google.com/communities/113527920160449995981" %}{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "google/plus_community_badge.html" href="https://plus.google.com/communities/113527920160449995981" %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="code-container">
                      <div class="clearfix">
                         <h5 class="code-title">Full Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">    {% verbatim %}{% social_widget_render "google/plus_community_badge.html" language="en-US" href="https://plus.google.com/communities/113527920160449995981" layout="portrait" showphoto=True showowners=False showtagline=True theme="light" width=300 %}{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "google/plus_community_badge.html" language="en-US" href="https://plus.google.com/communities/113527920160449995981" layout="portrait" showphoto=True showowners=False showtagline=True theme="light" width=300 %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="widget-settings">
                      <a href="#" class="show-widget-settings">Show widget settings</a>
@@ -833,6 +1022,68 @@
                   <p class="external-docs">Documentation: <a href="https://developers.google.com/+/web/badge/#community-badge" target="_blank">https://developers.google.com/+/web/badge/#community-badge</a></p>
                </div>
             </div>
+          </div>
+          <div class="social-widget-example">
+            <h4 class="social-widget-name" id="google-plus-share-button">Google+ Share Button</h4>
+            <div class="row">
+               <div class="col-xs-4">
+                  {% social_widget_render "google/plus_share_button.html" href="https://www.google.com" %}
+               </div>
+               <div class="col-xs-8">
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Minimal Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "google/plus_share_button.html" href="https://www.google.com" %}
+                         {% endverbatim %}
+                    </pre>
+                  </div>
+                  <div class="code-container">
+                     <div class="clearfix">
+                        <h5 class="code-title">Full Code</h5>
+                        <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
+                     </div>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "google/plus_share_button.html" language="en-US" href="https://plus.google.com/communities/113527920160449995981" layout="portrait" showphoto=True showowners=False showtagline=True theme="light" width=300 %}
+                         {% endverbatim %}
+                     </pre>
+                  </div>
+                  <div class="widget-settings">
+                     <a href="#" class="show-widget-settings">Show widget settings</a>
+                     <table class="table table-bordered widget-settings-table">
+                        <thead>
+                           <tr>
+                              <th>Setting</th>
+                              <th>Description</th>
+                              <th>Default</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>language</td>
+                              <td>Language of the Google+ badge</td>
+                              <td>"en-US"</td>
+                           </tr>
+                           <tr>
+                              <td>href</td>
+                              <td>URL to the Google+ page</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>annotation</td>
+                              <td>Widget style</td>
+                              <td>"none"</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="external-docs">Documentation: <a href="https://developers.google.com/+/web/share/" target="_blank">https://developers.google.com/+/web/share/</a></p>
+               </div>
+            </div>
          </div>
          <div class="social-widget-example">
             <h4 class="social-widget-name" id="youtube-subscribe-button">YouTube Subscribe Button</h4>
@@ -846,16 +1097,22 @@
                         <h5 class="code-title">Full Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">    {% verbatim %}{% social_widget_render "google/youtube_subscribe_button.html" channel="GoogleDevelopers" %}{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "google/youtube_subscribe_button.html" channel="GoogleDevelopers" %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="code-container">
                      <div class="clearfix">
                         <h5 class="code-title">Full Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">    {% verbatim %}{% social_widget_render "google/youtube_subscribe_button.html" channel="GoogleDevelopers" theme="default" layout="default" count="default" %}{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "google/youtube_subscribe_button.html" channel="GoogleDevelopers" theme="default" layout="default" count="default" %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="widget-settings">
                      <a href="#" class="show-widget-settings">Show widget settings</a>
@@ -913,16 +1170,22 @@
                         <h5 class="code-title">Minimal Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">    {% verbatim %}{% social_widget_render "instagram/badge.html" username="nike" %}{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "instagram/badge.html" username="nike" %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="code-container">
                      <div class="clearfix">
                         <h5 class="code-title">Full Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">    {% verbatim %}{% social_widget_render "instagram/badge.html" size=32 username="nike" %}{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "instagram/badge.html" size=32 username="nike" %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="widget-settings">
                      <a href="#" class="show-widget-settings">Show widget settings</a>
@@ -965,9 +1228,11 @@
                         <h5 class="code-title">Full Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">    {% verbatim %}        {% social_widget_render "pinterest/follow_button.html" href="http://www.pinterest.com/pinterest/" fullname="Pinterest" %}
-{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "pinterest/follow_button.html" href="http://www.pinterest.com/pinterest/" fullname="Pinterest" %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="widget-settings">
                      <a href="#" class="show-widget-settings">Show widget settings</a>
@@ -1009,10 +1274,11 @@
                         <h5 class="code-title">Full Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">    {% verbatim %}
-        {% social_widget_render "pinterest/pin_widget.html" href="http://www.pinterest.com/pin/99360735500167749/" %}
-{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "pinterest/pin_widget.html" href="http://www.pinterest.com/pin/99360735500167749/" %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="widget-settings">
                      <a href="#" class="show-widget-settings">Show widget settings</a>
@@ -1049,10 +1315,11 @@
                         <h5 class="code-title">Minimal Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">    {% verbatim %}
-            {% social_widget_render "pinterest/profile_widget.html" href="http://www.pinterest.com/pinterest/" %}
-{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "pinterest/profile_widget.html" href="http://www.pinterest.com/pinterest/" %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="code-container">
                      <div class="clearfix">
@@ -1060,11 +1327,10 @@
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
                      <pre class="code-sample">
-            {% verbatim %}
-            {% social_widget_render "pinterest/profile_widget.html" href="http://www.pinterest.com/pinterest/" pin_scale_width=80 pin_scale_height=320 pin_board_width=400 %}
-
-            {% endverbatim %}
-</pre>
+                        {% verbatim %}
+                            {% social_widget_render "pinterest/profile_widget.html" href="http://www.pinterest.com/pinterest/" pin_scale_width=80 pin_scale_height=320 pin_board_width=400 %}
+                        {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="widget-settings">
                      <a href="#" class="show-widget-settings">Show widget settings</a>
@@ -1116,10 +1382,11 @@
                         <h5 class="code-title">Minimal Code</h5>
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
-                     <pre class="code-sample">    {% verbatim %}
-        {% social_widget_render "pinterest/board_widget.html" href="http://www.pinterest.com/pinterest/pin-pets/" %}
-{% endverbatim %}
-</pre>
+                     <pre class="code-sample">
+                         {% verbatim %}
+                            {% social_widget_render "pinterest/board_widget.html" href="http://www.pinterest.com/pinterest/pin-pets/" %}
+                         {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="code-container">
                      <div class="clearfix">
@@ -1127,11 +1394,10 @@
                         <div class="zero-clipboard"><span class="copy-to-clipboard">Copy to clipboard</span></div>
                      </div>
                      <pre class="code-sample">
-            {% verbatim %}
-            {% social_widget_render "pinterest/board_widget.html" href="http://www.pinterest.com/pinterest/pin-pets/" pin_scale_width=80 pin_scale_height=320 pin_board_width=400 %}
-
-            {% endverbatim %}
-</pre>
+                        {% verbatim %}
+                            {% social_widget_render "pinterest/board_widget.html" href="http://www.pinterest.com/pinterest/pin-pets/" pin_scale_width=80 pin_scale_height=320 pin_board_width=400 %}
+                        {% endverbatim %}
+                     </pre>
                   </div>
                   <div class="widget-settings">
                      <a href="#" class="show-widget-settings">Show widget settings</a>
