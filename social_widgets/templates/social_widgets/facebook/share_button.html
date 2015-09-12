@@ -1,0 +1,5 @@
+{% extends "social_widgets/facebook/_base.html" %}
+{% load social_widgets %}
+{% block widget %}
+    <div class="fb-share-button" data-href="{{ href }}" {% if layout %}data-layout="{{ layout }}"{% endif %}></div>
+{% endblock widget %}
