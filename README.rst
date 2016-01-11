@@ -23,7 +23,7 @@ Useful links:  `Documentation <https://django-social-widgets.readthedocs.org/en/
 Requirements
 ------------
 * Python 2.6 or 2.7
-* Django 1.5 or higher
+* Django 1.6 or higher
 
 Quickstart
 ----------
