@@ -32,7 +32,7 @@ Quickstart
 
     pip install django-social-widgets
 
-2. Add “social_widgets” to INSTALLED_APPS::
+2. Add ``social_widgets`` to INSTALLED_APPS::
 
     INSTALLED_APPS = (
      ...
