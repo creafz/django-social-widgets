@@ -158,6 +158,7 @@ def social_widget_render(parser, token):
 
     return SocialWidgetNode(args, kwargs)
 
+
 @register.assignment_tag
 def social_get_facebook_locale(locale):
     """

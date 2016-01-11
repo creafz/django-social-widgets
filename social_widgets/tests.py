@@ -45,6 +45,7 @@ class IncorrectDataTest(TestCase):
                           render_string, "{% social_widget_render "
                                          "'facebook/likebox.html' x==2%}")
 
+
 class TestToDataStringWithDefaultFilter(TestCase):
     def test_true(self):
         html = render_string("{{ True|to_data_string_with_default }}")
