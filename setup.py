@@ -8,7 +8,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-social-widgets',
-    version='0.3.0',
+    version='0.4.0',
     packages=['social_widgets'],
     include_package_data=True,
     license='MIT License',
@@ -19,7 +19,7 @@ setup(
     keywords='Django, social network, template, facebook, twitter',
     url='https://github.com/creafz/django-social-widgets',
     download_url=
-    'https://github.com/creafz/django-social-widgets/tarball/0.3.0',
+    'https://github.com/creafz/django-social-widgets/tarball/0.4.0',
     author='Alex Parinov',
     author_email='creafz@gmail.com',
     classifiers=[
