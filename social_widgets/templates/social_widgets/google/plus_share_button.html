@@ -1,0 +1,5 @@
+{% extends "social_widgets/google/_base.html" %}
+{% load social_widgets %}
+{% block widget %}
+<div class="g-plus" data-action="share" data-href="{{ href }}" data-annotation="{{ annotation|to_data_string_with_default:"none" }}"></div>
+{% endblock widget %}

@@ -1,10 +1,16 @@
 import re
 
-from django import VERSION as DJANGO_VERSION
+from locale import normalize
+
 from django.template import loader, TemplateDoesNotExist
-from django.template.base import Node, Context, Library, TemplateSyntaxError
+from django.template.base import Node, TemplateSyntaxError
 from django.utils.encoding import smart_text
 from django.utils.translation import get_language, to_locale
+
+try:
+    from django.template import Library
+except ImportError:
+    from django.template.base import Library
 
 
 register = Library()
@@ -107,7 +113,7 @@ class SocialWidgetNode(Node):
 
         try:
             t = loader.get_template(template)
-            return t.render(Context(kwargs))
+            return t.render(kwargs)
         except TemplateDoesNotExist:
             return ''
 
@@ -151,3 +157,14 @@ def social_widget_render(parser, token):
                 args.append(parser.compile_filter(value))
 
     return SocialWidgetNode(args, kwargs)
+
+
+@register.assignment_tag
+def social_get_facebook_locale(locale):
+    """
+     Normalize the locale string and split the value needed for the api url
+    """
+    if locale is None:
+        return 'en_US'
+
+    return normalize(locale).split('.')[0]

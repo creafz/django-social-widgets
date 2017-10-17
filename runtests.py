@@ -15,7 +15,14 @@ settings.configure(
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': ':MEMORY:',
         }
-    }
+    },
+    TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [os.path.join(os.path.dirname(__file__), 'social_widgets/templates')],
+            #'APP_DIRS': True,
+        },
+    ]
 )
 
 # Added to support Django >= 1.7

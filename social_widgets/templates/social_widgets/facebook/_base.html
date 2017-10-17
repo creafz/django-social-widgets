@@ -1,9 +1,11 @@
 {% load social_widgets %}
+{% load i18n %}
 {% block javascript %}
+{% social_get_facebook_locale locale as locale %}
 {% if nojs or widget_service in social_widgets_javascript %}
    {# Do not load JavaScript then #}
 {% else %}
-    <div id="fb-root"></div>
+    <div id="fb-root" style="display: inline !important"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
