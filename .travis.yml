@@ -9,7 +9,7 @@ env:
   - DJANGO=1.11
 
 install:
-  - pip install -q Django==$DJANGO --use-mirrors
+  - pip install -q Django==$DJANGO
   - pip install coveralls
 
 script:
