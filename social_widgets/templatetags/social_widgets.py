@@ -113,7 +113,7 @@ class SocialWidgetNode(Node):
 
         try:
             t = loader.get_template(template)
-            return t.render(Context(kwargs))
+            return t.render(kwargs)
         except TemplateDoesNotExist:
             return ''
 
