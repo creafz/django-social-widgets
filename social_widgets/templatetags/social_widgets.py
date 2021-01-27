@@ -113,7 +113,7 @@ class SocialWidgetNode(Node):
 
         try:
             t = loader.get_template(template)
-            return t.render(Context(kwargs))
+            return t.render(kwargs)
         except TemplateDoesNotExist:
             return ''
 
@@ -159,7 +159,7 @@ def social_widget_render(parser, token):
     return SocialWidgetNode(args, kwargs)
 
 
-@register.assignment_tag
+@register.simple_tag
 def social_get_facebook_locale(locale):
     """
      Normalize the locale string and split the value needed for the api url
