@@ -3,7 +3,7 @@ import re
 from locale import normalize
 
 from django.template import loader, TemplateDoesNotExist
-from django.template.base import Node, Context, TemplateSyntaxError
+from django.template.base import Node, TemplateSyntaxError
 from django.utils.encoding import smart_text
 from django.utils.translation import get_language, to_locale
 
